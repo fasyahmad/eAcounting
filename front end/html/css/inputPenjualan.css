@@ -1,0 +1,90 @@
+body {
+  height: 500px;
+}
+
+
+
+.login {
+  margin-left: 100px;
+  width: 300px;
+  position: absolute;
+  top: 65%;
+  left: 20%;
+  margin: -184px 0px 0px -155px;
+  /* background: rgba(18, 6, 71, 0.2); */
+  padding: 20px 30px;
+  border-radius: 0px;
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.3),inset 0px 1px 0px rgba(255,255,255,0.07)
+}
+
+
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: all 0.2s linear;
+  transform: translate(10px, 0);
+  opacity: 0;
+}
+
+
+/* ================================= login button */
+
+button{
+	width: 200px;
+  padding: 13px 38px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: #ffffff;
+  background-clip: padding-box;
+  color: #3acfd5;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button::after{
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(to right, #3acfd5, #be5a97);
+  content: '';
+  z-index: -1;
+  border-radius: 8px;
+}
+
+button:hover{
+  color: #ffffff;
+  background: linear-gradient(to right, #3acfd5, #be5a97);
+  background-size: 104%;
+  background-position: -2px;
+}
+
+
+/* Tanggal transaksi */
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* custom styles */
+label {
+  display: block;
+}
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 3px 5px;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+  width: 190px;
+}

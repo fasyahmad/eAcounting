@@ -1,0 +1,56 @@
+============== SQL DATABASE ================
+
+
+create table members (
+    id_member serial primary key,
+    username varchar,
+    password varchar,
+    ownerorbuyer integer,
+    balance integer 
+);
+
+create table modal (
+    id_barang serial primary key,
+    lapak_id integer,
+    nama_barang varchar unique,
+    jumlah_barang integer,
+    satuan varchar,
+    harga_beli integer,
+    harga_jual integer,
+    foreign key (lapak_id) references members(id_member)
+);
+
+create table penjualan (
+    id_penjualan serial primary key,
+    nama_barang varchar,
+    jumlah_barang integer,
+    tangal_pembelian timestamp,
+    foreign key (nama_barang) references modal(nama_barang)
+);
+
+
+DBDIAGRAM IO ================================
+
+table members {
+    id_member serial primary key
+    username varchar
+    password varchar
+    ownerorbuyer integer
+    balance integer 
+}
+
+table modal {
+    id_barang serial primary key
+    lapak_id integer
+    nama_barang varchar
+    jumlah_barang integer
+    satuan varchar
+    harga_beli integer
+    harga_jual integer
+}
+
+table pembeli {
+    id_pembeli serial primary key
+    id_ integer
+    jumlah_belanja integer
+}
